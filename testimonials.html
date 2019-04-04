@@ -1,0 +1,339 @@
+<html>
+<head>
+
+<title>Language Experiment</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://sunwooj.github.io/experiments-shared/mmturkey.0.5.js"></script> 
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+<script src="testimonials.js"></script>
+
+<link rel="stylesheet" href="https://sunwooj.github.io/experiments-shared/sliders/jquery-ui.css"></link>
+
+<link href ="testimonials.css" rel="stylesheet" type="text/css"/>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+</head>
+
+
+
+
+
+<!-- main html body -->
+<body>
+
+<div class='slide' id='intro'>   
+    <div>
+
+<br>
+<!-- <img src="https://stanford.edu/~sunwooj/logo-cardinal.png" alt="Stanford Department of Linguistics" width="240"> -->
+<br>
+<p class='block-text2'>
+NOTE: PLEASE DO NOT OPEN THE SURVEY IN A NEW TAB. THIS WILL PREVENT THE MTURK FROM SUBMITTING THE RESULTS. THERE IS NO VERIFICATION CODE AT THE END. MTURK WILL SUBMIT THE RESULTS AUTOMATICALLY.
+</p>
+
+<p class='block-text'>
+LEGAL INFORMATION:
+We invite you to participate in a research study on language production and comprehension. There are no risks or benefits of any kind involved in this study. You will be paid for your participation at the posted rate.
+<br><br>
+If you have read this form and have decided to participate in this experiment, please understand your participation is voluntary and you have the right to withdraw your consent or discontinue participation at any time without penalty or loss of benefits to which you are otherwise entitled. You have the right to refuse to do particular tasks. Your individual privacy will be maintained in all published and written data resulting from the study. You may print this form for your records.
+<!-- CONTACT INFORMATION:
+<br><br>
+If you have any questions, concerns or complaints about this research study, its procedures, risks and benefits, please contact one of the researchers. -->
+</p>
+
+<br><br>
+<button type='button' id='gotoInstructions'>Proceed to instructions</button>
+<br><br> 
+
+    </div>
+</div>
+
+
+
+
+<div class='slide' id='instructions'>
+    <div>
+
+<br><br>
+<p class='block-text'>In this experiment, you will be listening to 6 interpreters interpreting the defendants' testimony in immigration courts. Please listen carefully and answer a few questions about the impressions you had about the interpreter and the defendant. </p>
+
+<p class='block-text'> <strong> Note: You must be able to play sound files to participate in this experiment. This is a psychology experiment requiring undivided attention on your part. Please devote your attention solely to this task and read carefully. <span style="font-weight: bold; color: #8C1515;">We will check to make sure that every sound file was played and listened to!</span></strong> </p>
+
+
+<br><br>
+<button type='button' id='startbutton'>Start experiment</button>
+<!-- <br><br> -->
+<!-- <p><span style='color: blue' id="checkboxWarning"></span></p> -->
+
+    </div>
+</div>
+
+
+
+
+<!-- Main experiment starts here -->
+<div class='slide' id='stage'>
+    <div>
+        <div>
+
+
+
+<!-- Audio -->
+<form id='audioForm'>
+
+<p><span style="font-weight: bold; color: #8C1515;"> Trial <span class="item_number">{{}}</span> out of 6</span></p>
+
+<!-- Audio stimuli displayed here -->
+<p class='questionSent'>The audio clip below is a recording of an interpreter who is interpreting a defendant making a case at an immigration court. Please play and listen carefully to the sound files.</p>
+<br>
+<span style="font-weight: bold; color: #8C1515;"> Sound <span class="item_number">{{}}</span> out of 6</span>
+<br>
+<audio id="currentAudio" controls=""><source src="#" type="audio/wav"></audio>
+
+</form>
+
+
+
+<!-- Question 1: interpreter proficiency -->
+<form id='responseForm1'>
+
+<p class='questionSent'>Please drag or click on the slider bars to answer the questions below. (Numbers will appear once you do so.)
+</p>
+
+<p class='questionSent'>Q1: Based just on what you heard, do you think the interpreter represented the defendant well?
+
+  <input type="hidden" class="slidervals" name="sliderval1" id="sliderval1" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+
+<p>
+<span class='leftLabel'> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; No, not at all
+</span> 
+<span class='rightLabel'> Yes, very much &nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+<br>
+<span style='float: left;'> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (0) </span>  
+<span style='float: right;'> (100) &nbsp; &nbsp; &nbsp; &nbsp; </span>
+<br>
+</p>
+
+
+<div class="sliders" id="slider1"></div>
+
+<p class='center-text' > (Drag or click the sliders to left or right.) 
+</p>
+
+</form>
+
+
+
+
+<!-- Q2: Naturalness rating -->
+<form id='responseForm2'>
+
+<p class='questionSent'>Q2: Based just on what you heard, how concerned do you think the interpreter is about the defendant? Does the interpreter have the defendant's best interests in mind? 
+
+  <input type="hidden" class="slidervals" name="sliderval2" id="sliderval2" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+
+<p>
+<span class='leftLabel'> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; No, not at all
+</span> 
+<span class='rightLabel'> Yes, very much &nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+<br>
+<span style='float: left;'> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (0) </span>  
+<span style='float: right;'> (100) &nbsp; &nbsp; &nbsp; &nbsp; </span>
+<br>
+</p>
+
+<div class="sliders" id="slider2"></div>
+
+<p class='center-text' > (Drag or click the sliders to left or right.) 
+</p>
+
+</form>
+<br>
+
+
+
+
+
+<!-- Q2: Naturalness rating -->
+<form id='responseForm3'>
+
+<p class='questionSent'>Q3: How credible is the defendant's story, as interpreted by the interpreter?
+
+  <input type="hidden" class="slidervals" name="sliderval3" id="sliderval3" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+
+<p>
+<span class='leftLabel'> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; No, not at all
+</span> 
+<span class='rightLabel'> Yes, very much &nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+<br>
+<span style='float: left;'> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (0) </span>  
+<span style='float: right;'> (100) &nbsp; &nbsp; &nbsp; &nbsp; </span>
+<br>
+</p>
+
+<div class="sliders" id="slider3"></div>
+
+<p class='center-text' > (Drag or click the sliders to left or right.) 
+</p>
+
+</form>
+<br>
+
+
+
+
+<form id='responseForm4'>
+<br>
+<p class='questionSent'>Q4: Do you think the defendant should be allowed to stay in the U.S.?</p> 
+
+<div id='YesNo' class='responseText'> 
+
+<label><input type='radio' class='response' name='response' id='Y' value='Yes' /> <strong>YES </strong></label>
+<label><input type='radio' class='response' name='response' id='N' value='No' /> <strong>NO </strong></label>
+
+</div> 
+
+</form>
+<br>
+
+
+
+
+<!-- Optional responses -->
+<p id='optional1' class='block-text'>(Optional) Any additional comments?</p>
+
+<input type='text' id="commentBox1" class="commentBox" style="width: 400px;" value="" />
+
+
+
+<!-- Warning message in case any of Q1-Q2 doesn't get a response -->
+<p><span style='color: blue' id="warning"></span></p>
+
+
+<button type='button' id='continue'>Continue</button>
+
+
+<p><span style="font-weight: bold; color: #8C1515;"> Situation <span class="item_number">{{}}</span> out of 6</span></p>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Demographic information slide -->
+<div class='slide' id='language'>
+    <div>
+
+
+<form id='languageForm'>
+
+<p class='questionSent'> 
+You are done with the main experiment. As a final step, we ask that you fill out the following brief exit questionnaire.
+</p> <br>
+
+
+<form id='englishNative'>
+<p class='questionSent'> 1. Are you a native speaker of American English? 
+<br>
+<input type='radio' class='nat' name='natC' id='AmE' value='Y' /> Yes <br>
+<input type='radio' class='nat' name='natC' id='nonAmE' value='N' /> No 
+<br>
+Please list any other languages that you speak fluently.
+<br>
+<input type='text' id='languages' value="" />
+</p>
+</form>
+
+
+<form id='ageForm'>
+<p class='questionSent'> 2. What is your age?
+<br>
+<input type='radio' class='age' name='ageC' id='20s' value='20s' /> 18-29 <br>
+<input type='radio' class='age' name='ageC' id='30s' value='30s' /> 30-39 <br>
+<input type='radio' class='age' name='ageC' id='40s' value='40s' /> 40-49 <br>
+<input type='radio' class='age' name='ageC' id='50s' value='50s' /> 50-59 <br>
+<input type='radio' class='age' name='ageC' id='60s' value='60s' /> 60+ <br>
+</p>
+</form>
+
+
+<form id='genderForm'>
+<p class='questionSent'> 3. How would you describe your gender? 
+<br>
+<input type='radio' class='gen' name='genC' id='mgen' value='M' /> Male <br>
+<input type='radio' class='gen' name='genC' id='fgen' value='F' /> Female <br>
+<input type='radio' class='gen' name='genC' id='nbgen' value='NB' /> Non-binary <br>
+<input type='radio' class='gen' name='genC' id='ogen' value='O' /> Other:  <input type='text' name='gen' id='ogen_com' />
+</p>
+</form>
+
+
+<form id='ethnicityForm'>
+<p class='questionSent'> 4. How would you describe your racial/ethnic identity?
+<br>
+<input type='radio' class='eth' name='ethC' id='afa' value='AFR' /> African American <br>
+<input type='radio' class='eth' name='ethC' id='asa' value='ASI' /> Asian American <br>
+<input type='radio' class='eth' name='ethC' id='ca' value='CAU' /> Caucasian <br>
+<input type='radio' class='eth' name='ethC' id='la' value='LAT' /> Latina/o/x <br>
+<input type='radio' class='eth' name='ethC' id='nta' value='NAT' /> Native American <br>
+<input type='radio' class='eth' name='ethC' id='oa' value='OTH' /> Other:  <input type='text' name='eth' id='oeth_com' /><br>
+</p>
+</form>
+
+
+<form id='regionForm'>
+<p class='questionSent'>5. Where would you say you grew up? (In other words: what is your hometown?) 
+<br>
+<input type='radio' class='reg' name='regC' id='nonus' value='nonUS' /> Outside the US <br>
+<input type='radio' class='reg' name='regC' id='o48s' value='non48' /> Outside the contiguous 48 states <br>
+<input type='radio' class='reg' name='regC' id='neweng' value='NE' /> New England <br>
+<input type='radio' class='reg' name='regC' id='midatl' value='MA' /> The Mid-Atlantic / Northeast Corridor (greater DC, Philadelphia, NY) <br>
+<input type='radio' class='reg' name='regC' id='midw' value='MW' /> The Midwest / The Great Lakes <br>
+<input type='radio' class='reg' name='regC' id='appal' value='SO' /> Appalachia / The South <br>
+<input type='radio' class='reg' name='regC' id='sw' value='SW' /> The Southwest <br>
+<input type='radio' class='reg' name='regC' id='rock' value='RO' /> The Rockies <br>
+<input type='radio' class='reg' name='regC' id='wc' value='WE' /> The West Coast <br>
+<input type='radio' class='reg' name='regC' id='rego' value='OT' /> Other:  <input type='text' name='eth' id='reg_com' /><br>
+</p>
+</form>
+
+
+
+<form id='commentsForm'>
+<p class='questionSent'>(Optional) 6. Any other comments about the questions above or the general experiment?
+<br>
+<input type='text' id='lang_com' value="" />
+</p>
+</form>
+
+
+</form>
+
+<br>
+
+<p><span style='color: blue' id="demoWarning"></span></p>
+
+<button type='button' id='lgsubmit'>Submit</button>
+
+    </div>
+</div>
+
+
+<div class='slide' id='finish'>
+<p>You're done with the experiment. Thanks so much for participating!</p>
+</div>
+
+</body>
+</html>
