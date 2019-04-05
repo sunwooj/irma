@@ -101,7 +101,8 @@ function stepExperiment () {
         audioStim = stimuliVector[conditionRandom];
 
         // Tell HTML which sound file will be played
-        document.getElementById('currentAudio').src = "stimuli/" + audioStim + ".wav";
+        // document.getElementById('currentAudio').src = "stimuli/" + audioStim + ".wav";
+        document.getElementById('currentAudio').src = "https://sunwooj.github.io/irma/stimuli/" + audioStim + ".wav";
 
                
         $(".item_number").html(trialnum); 
