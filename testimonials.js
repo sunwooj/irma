@@ -4,7 +4,7 @@
 
 var stimuliList = shuffle([ 
 
-["JOS-1st-HES", "JOS-1st-NOH", "JOS-2nd-HES", "JOS-2nd-NOH"],
+[ "JOS-1st-HES", "JOS-1st-NOH", "JOS-2nd-HES", "JOS-2nd-NOH"],
 
 ["TOM-1st-NOH", "TOM-2nd-HES", "TOM-2nd-NOH", "TOM-1st-HES"],
 
@@ -102,7 +102,7 @@ function stepExperiment () {
 
         // Tell HTML which sound file will be played
         // document.getElementById('currentAudio').src = "stimuli/" + audioStim + ".wav";
-        document.getElementById('currentAudio').src = "https://sunwooj.github.io/irma/stimuli/" + audioStim + ".wav";
+        document.getElementById('currentAudio').src = "http://stanford.edu/~junhongc/sw_stimuli/" + audioStim + ".wav";
 
                
         $(".item_number").html(trialnum); 
