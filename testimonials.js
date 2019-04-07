@@ -1,6 +1,6 @@
 //(if collecting data with php/server instead of MTurk)
-//var experimentName = "likelihood-exp1";
-//var submitAddress = "https://web.stanford.edu/~sunwooj/cgi-bin/process.php";
+var experimentName = "testimonials-pilot";
+var submitAddress = "https://web.stanford.edu/~junhongc/cgi-bin/process.php";
 
 var stimuliList = shuffle([ 
 
