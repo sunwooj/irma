@@ -61,4 +61,5 @@ summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE,
 
 ```{r, echo=FALSE, eval=FALSE}
 ## Creat combined data set for experiment 1
-dat1a <- read.csv('')
+dat1 <- read.csv('testimonials-pilot.csv')
+
